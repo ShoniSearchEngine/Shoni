@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+         <form action="https://formsubmit.co/Faresxmail1001@gmail.com" method="POST">
+            <h3> CONTACT US</h3>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Email From Website Visitor">
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html/index.html">
+        <input type="text" name="name" placeholder="write your meassage here" required>
+        <button type="submit">Send</button>
+   </form>
+    </div>    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                SecureToken: "fa230ea5-32e2-4e02-b2a5-9f8384204ea0",
+                To : 'faresxmail1001@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Enquiry",
+                Body : "Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone No: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert("Message Sent Succesfully")
+            );
+        }
+        
+    </script>
+</body>
+</html>

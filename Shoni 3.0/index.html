@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoni Search Box</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+
+  .search {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .search h4{
+    margin: 50px 0px 20px 0px;
+    font-size: 90px;
+    color: rgb(238, 237, 237);
+    
+  }
+
+  .search input[type=text]{
+    width: 60%;
+    border-radius: 30px;
+    outline: none;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: solid 3px rgb(200, 200, 200);
+    background-color: rgb(230, 230, 230);
+    height: 50px;
+  }
+
+  .search a{
+    background-color: #e8e8e8;
+    margin-top: 20px;
+    width: 100px;
+    text-align: center;
+    margin-left: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    font-family: Arial;
+    border-radius: 20px;
+  }
+
+  .search a:hover{
+    background-color: #747474a1;
+  }
+
+ 
+  
+
+  .copyright_footer{
+      position: fixed;
+      color: rgb(0, 0, 0);
+      bottom: 0;
+      width: 100%;
+      background-color: #ffffff;
+      line-height: 2;
+      text-align: center;
+      left: 0;
+  }
+
+  body{
+    height: 100%;
+    background-color: black;
+ 
+  }
+
+.img-eye{
+   width: 217px;
+   margin: 21px 10px 20px 20px;
+}
+
+.img-shoni{
+   size: 10px;
+   margin: 21px 10px 20px 20px;
+}
+
+.copyright_footer{
+  height: 28px;
+}
+
+.nav-contact{
+  text-align: end;
+  color: rgb(0, 0, 0);
+}
+
+</style>
+<body>
+<!-- NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img class="img-shoni" src="SHONI BG.png" alt="my shoni">
+    <img class="img-eye" src="arrow no bg2.png" alt="my eye">
+    <form>
+      </a>
+      </form>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"> 
+        </li>
+        <li class="nav-item">
+          
+        </li>
+        <li class="nav-item">
+          </a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+      </form>
+    </div>
+  </nav>
+
+<!-- Search Bar -->       
+<div class="search">
+  <h4><b>S H O N I</b></h4>
+  <input id="search" type="text" placeholder="Search..."><br>
+  <a href="#" class="btn" onclick="dict()">Dictionary</a>
+  <a href="#" class="btn" onclick="online()">Search Online</a>
+</div> 
+
+
+<!-- JavaScript -->
+<script>
+  function dict(){
+    var x = document.getElementById("search").value; // store search keyword
+    const url = "https://dictionary.cambridge.org/dictionary/english/";
+    var url1 = url + x;
+    var win = window.open(url1, '_blank');
+    win.focus;
+    }
+    function online(){
+    var x = document.getElementById("search").value; // store search keyword
+    const url = "https://www.bing.com/search?search=&q=";
+    var url1 = url + x;
+    var win = window.open(url1, '_blank');
+    win.focus;
+    }
+  
+    </script>
+
+<div class="copyright_footer">
+   <a class="nav-contact" href="http://127.0.0.1:5500/ddd/Shoni%203.0/CONTACT%20US/index.html">Contact us
+  </a>
+</div>
+
+<!-- footer -->
+<div class="footer">
+  <div class="footer content">
+  <div class="footer-section about"></div>
+  <div class="footer-section links"></div>
+  <div class="footer-section contact-form"></div>
+
+</div>
+
+</body>
+</html>
